@@ -8,24 +8,23 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
+          username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ubuntu/terminal-profile
+            cd /home/ubuntu/terminal-profile/portfolio-fullstack
             git pull origin main
+
             cd backend
             npm install
-            pm2 restart backend || pm2 start server.js --name backend
+            pm2 restart backend
+
             cd ../frontend
             npm install
             npm run build
-            sudo systemctl restart nginx
+
+            sudo systemctl reload nginx
