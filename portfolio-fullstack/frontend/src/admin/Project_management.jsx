@@ -43,7 +43,7 @@ const ProjectManagement = () => {
   const categories = ['Web Development', 'Mobile App', 'Desktop App', 'AI/ML', 'Data Science', 'Other'];
   const statuses = ['draft', 'published', 'archived'];
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+  const API_URL = '/api';
 
   useEffect(() => {
     fetchProjects();
@@ -422,7 +422,7 @@ const ProjectManagement = () => {
               {project.thumbnailImage ? (
                 <div className="aspect-video bg-[#1a1a1a] relative">
                   <img
-                    src={`http://localhost:3000${project.thumbnailImage}`}
+                    src={project.thumbnailImage}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />

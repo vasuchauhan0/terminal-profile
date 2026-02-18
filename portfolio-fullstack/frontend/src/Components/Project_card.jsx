@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
       if (project.thumbnailImage.startsWith('http')) {
         return project.thumbnailImage;
       }
-      return `http://localhost:3000${project.thumbnailImage}`;
+      return project.thumbnailImage;
     }
     return null;
   };

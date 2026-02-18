@@ -48,9 +48,8 @@ const AddProjectForm = ({ onClose, project, onSuccess }) => {
 
     try {
       const url = project
-        ? `http://localhost:3000/api/projects/${project._id}`
-        : "http://localhost:3000/api/projects";
-
+        ? `/api/projects/${project._id}`
+: "/api/projects";
       const method = project ? "PUT" : "POST";
 
       const response = await fetch(url, {
