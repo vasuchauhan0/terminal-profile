@@ -1,0 +1,33 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Frontend and Backend to EC2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /home/ubuntu/terminal-profile/portfolio-fullstack
+            git pull origin main
+
+            # Install and restart backend
+            cd backend
+            npm install
+            pm2 restart backend
+
+            # Build frontend
+            cd ../frontend
+            npm install
+            npm run build
+
+            # Reload nginx
+            sudo systemctl reload nginx
