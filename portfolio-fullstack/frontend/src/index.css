@@ -1,0 +1,47 @@
+@import "tailwindcss";
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: #09090b; /* zinc-950 */
+}
+
+body {
+  overflow-y: auto;
+}
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    top: -30%;
+  }
+  100% {
+    top: 120%;
+  }
+}
+
+@keyframes fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
