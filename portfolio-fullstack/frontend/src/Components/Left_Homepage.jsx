@@ -46,7 +46,7 @@ const Right_Homepage = () => {
                  "
                 >
 
-                 Vansh 
+                 Vansh Chauhan.
 
                 </span>
                 </p>
@@ -54,7 +54,7 @@ const Right_Homepage = () => {
 
           <p className="text-green-300 text-2xl mt-3">
 
-            &gt;Backend Engine
+            &gt;Backend Engineer
             
           </p>
 
