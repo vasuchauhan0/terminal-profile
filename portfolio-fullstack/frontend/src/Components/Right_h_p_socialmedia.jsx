@@ -6,7 +6,7 @@ const Right_h_p_socialmedia = () => {
     <div className="flex justify-center gap-6 mt-6 text-zinc-500">
   
   <a
-    href="https://github.com/yourusername"
+    href="https://github.com/vasuchauhan0"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-green-400 transition"
@@ -15,7 +15,7 @@ const Right_h_p_socialmedia = () => {
   </a>
 
   <a
-    href="https://linkedin.com/in/yourusername"
+    href="https://linkedin.com"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-green-400 transition"
@@ -24,7 +24,7 @@ const Right_h_p_socialmedia = () => {
   </a>
 
   <a
-    href="https://instagram.com/yourusername"
+    href="https://www.instagram.com/vanshchauhan5515/#"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-green-400 transition"
