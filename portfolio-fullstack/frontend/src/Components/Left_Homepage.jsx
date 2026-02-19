@@ -46,7 +46,7 @@ const Right_Homepage = () => {
                  "
                 >
 
-                 Vansh Chauhan.
+                 Vansh 
 
                 </span>
                 </p>
