@@ -17,8 +17,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/terminal-profile/portfolio-fullstack
-            git pull origin main
-
+            git fetch origin
+            git reset --hard origin/main
             cd backend
             npm install
             pm2 restart backend
